@@ -1,0 +1,6 @@
+{
+    "navigationBarTitleText": "XY快乐屋",
+    "usingComponents": {
+        "test": "../../components/test/test"
+    }
+}
