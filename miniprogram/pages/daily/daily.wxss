@@ -1,5 +1,18 @@
 /* miniprogram/pages/daily/daily.wxss */
+.page-box {
+    flex-wrap: wrap;
+}
+.btn {
+    width: 300rpx;
+    height: 300rpx;
+    margin-top: 40rpx;
+    font-size: 36rpx;
+    font-weight: 600;
+    background-color: #f8f8f8;
+    border-radius: 16rpx;
+}
 .daily-input {
+    margin-top: 40rpx;
     width: 90%;
     height: 300rpx;
     border-radius: 16rpx;

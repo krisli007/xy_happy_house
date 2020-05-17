@@ -30,13 +30,23 @@
             </swiper-item>
         </block>
     </swiper>
-    <!-- 轮播图 -->
+
     <view class="flex-je">
         <image class="right-shot" src="../../images/right.png" bindtap="toDaily"></image>
     </view>
+    <view class="flex-vm question" hidden="{{question}}">
+        世界上最爱你的人是谁呀？
+    </view>
+    <view class="flex-jse" hidden="{{question}}">
+        <view data-index='1' bindtap="clickAnswer" class="answer-item">{{itemA}}</view>
+        <view data-index='2' bindtap="clickAnswer" class="answer-item">{{itemB}}</view>
+    </view>
+    <view class="flex-vm world" hidden="{{!question}}">
+        记住啦！你的世界里李贵星很重要的~
+    </view>
     <view class="flex1 flex-v flex-jse flex-ac">
         <!-- 纪念日计数器 -->
-        <view class="count-box flex-v flex-ac">
+        <view class="count-box flex-v flex-ac" bindtap="toAnniversary">
             <view class="count-text">猪猪在一起已经</view>
             <view class="count-day">{{countUp}}天</view>
             <view class="count-time">{{countDown}}</view>

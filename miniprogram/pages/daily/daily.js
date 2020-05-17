@@ -12,22 +12,28 @@ Page({
         this.setData({
             test: e.detail.value
         })
-        
     },
-
-    /**
-     * 生命周期函数--监听页面加载
-     */
-    onLoad: function (options) {
-
+    toFruitMachine () {
+        wx.navigateTo({
+          url: '../fruitMachine/fruitMachine',
+        })
     },
-
-
-    /**
-     * 生命周期函数--监听页面显示
-     */
-    onShow: function () {
-
+    toSweetDaily () {
+        wx.navigateTo({
+          url: '../sweetDaily/sweetDaily',
+        })
     },
-
+    toAnniversary () {
+        wx.navigateTo({
+          url: '../anniversary/anniversary',
+        })
+    },
+    toMore () {
+        wx.showModal({
+            title: '正在研发中',
+            content: '不要催啦！暂时想不到啦！',
+            confirmText: '好的好的',
+            showCancel: false
+        })
+    }
 })

@@ -1,0 +1,50 @@
+<!--components/prize/prize.wxml-->
+<view class="tips flex-vm" wx:if="{{prizeStatus === 0}}">
+    还有{{remainTime}}秒可再次抽奖
+</view>
+
+<view class="prize_wp">
+    <view class="prize_item {{id == 1 ? 'on' : ''}}" >
+        <view class="prize-text">{{prize[1]}}</view>
+        <image src="../../images/swiper6.jpg" mode="widthFix"></image>
+    </view>
+
+    <view class="prize_item {{id == 2 ? 'on' : ''}}">
+        <view class="prize-text">{{prize[2]}}</view>
+        <image src="../../images/swiper2.jpg" mode="widthFix"></image>
+    </view>
+
+    <view class="prize_item {{id == 3 ? 'on' : ''}}" >
+        <view class="prize-text">{{prize[3]}}</view>
+        <image src="../../images/swiper8.jpg" mode="widthFix"></image>
+    </view>
+
+    <view class="prize_item {{id == 8 ? 'on' : ''}}" >
+        <view class="prize-text">{{prize[8]}}</view>
+        <image src="../../images/swiper5.jpg" mode="widthFix"></image>
+    </view>
+
+    <view class="prize_item prize_item_btn" bindtap = "startPrize">
+        <image src = "../../assets/marquee_btn.png"/>
+    </view> 
+
+    <view class="prize_item {{id == 4 ? 'on' : ''}}" >
+        <view class="prize-text">{{prize[4]}}</view>
+        <image src="../../images/swiper9.png" mode="widthFix"></image>
+    </view>
+
+    <view class="prize_item {{id == 7 ? 'on' : ''}}" >
+        <view class="prize-text">{{prize[7]}}</view>
+        <image src="../../images/swiper3.jpg" mode="widthFix"></image>
+    </view>
+
+    <view class="prize_item {{id == 6 ? 'on' : ''}}" >
+        <view class="prize-text">{{prize[6]}}</view>
+        <image src="../../images/thx.jpg" mode="widthFix"></image>
+    </view>
+
+    <view class="prize_item {{id == 5 ? 'on' : ''}}" >
+        <view class="prize-text">{{prize[5]}}</view>
+        <image src="../../images/swiper7.jpg" mode="widthFix"></image>
+    </view>
+</view>

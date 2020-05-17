@@ -19,6 +19,23 @@ page {
   width: 60rpx;
   height: 60rpx;
 }
+.question {
+  margin-bottom: 16rpx;
+  font-weight: 600;
+  color: #f44336;
+}
+.answer-item {
+  padding: 8rpx 16rpx;
+  border: 2rpx solid #fff;
+  border-radius: 32rpx;
+  color: #fff;
+  background-color: #f44336;
+}
+.world {
+  font-weight: 600;
+  color: #f44336;
+}
+
 .count-box {
   background-color: #FFE5F0;
   padding: 60rpx 80rpx;

@@ -1,0 +1,30 @@
+<!--miniprogram/pages/anniversary/anniversary.wxml-->
+<form bindsubmit="formSubmit" class="form-box flex-jsb">
+    <view class="detail-box flex1">
+        <view class="form-item">
+            <!-- <image src="../../images/index/title.png" class="title-icon"></image> -->
+            <input name="title" placeholder="点击这里输入事件名称" value="{{default}}"></input>
+        </view>
+
+        <view class="form-item">
+            <picker mode="date" value="{{date}}" name="date" bindchange="bindDateChange">
+                目标日: <text class="date">{{date}}</text>
+            </picker>
+        </view>
+    </view>
+    <button class="add-btn flex-vm" form-type="submit">保存</button>
+</form>
+
+<view wx:for="{{anniversary}}" wx:key="item" hidden="{{anniversary.length === 0}}" class="flex-jsb flex-ac anniversary-item" data-index="{{index}}" bindlongpress="delete">
+    <view class="flex">
+        <view class="anniversary-title">{{item.title}}</view>
+        <view>{{item.statusText}}</view>
+        <view class="anniversary-date">
+            ({{item.date}})
+        </view>
+    </view>
+    <view class="{{item.statusText === '已经' ? 'already' : 'notyet'}} flex">
+        <view class="flex-vm sy-days">{{item.syDays}}</view>
+        <view class="flex-vm tian">天</view>
+    </view>
+</view>

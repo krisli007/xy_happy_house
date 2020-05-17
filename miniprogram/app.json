@@ -1,13 +1,17 @@
 {
     "pages": [
         "pages/index/index",
-        "pages/daily/daily"
+        "pages/anniversary/anniversary",
+        "pages/daily/daily",
+        "pages/fruitMachine/fruitMachine",
+        "pages/login/login",
+        "pages/sweetDaily/sweetDaily"
     ],
     "window": {
         "backgroundTextStyle": "light",
         "navigationBarBackgroundColor": "#F8E8F0",
         "backgroundColor": "#F8E8F0",
-        "navigationBarTitleText": "云开发 QuickStart",
+        "navigationBarTitleText": "XY快乐屋",
         "navigationBarTextStyle": "black"
     },
     "sitemapLocation": "sitemap.json",

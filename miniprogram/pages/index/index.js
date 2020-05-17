@@ -10,56 +10,63 @@ Page({
     countDown: '',
     // 轮播图
     banner: {
-        list: [
-            '../../images/swiper1.jpg',
-            '../../images/swiper2.jpg',
-            '../../images/swiper3.jpg',
-            '../../images/swiper4.jpg',
-            '../../images/swiper5.jpg'
-        ],
-        indicatorDots: true,
-        autoplay: true,
-        interval: 4000,
-        duration: 1000,
-        circular: true
+      list: [
+          '../../images/swiper1.jpg',
+          '../../images/swiper2.jpg',
+          '../../images/swiper3.jpg',
+          '../../images/swiper4.jpg',
+          '../../images/swiper5.jpg'
+      ],
+      indicatorDots: true,
+      autoplay: true,
+      interval: 4000,
+      duration: 1000,
+      circular: true
     },
+    itemA: '李贵星',
+    itemB: '宋闵浩',
+    question: false
   },
-  toDaily () {
-    wx.navigateTo({
-      url: '../daily/daily',
-    })
-  },
-
-  onGetUserInfo: function (e) {
-    if (!this.data.logged && e.detail.userInfo) {
-      this.setData({
-        logged: true,
-        avatarUrl: e.detail.userInfo.avatarUrl,
-        userInfo: e.detail.userInfo
+  clickAnswer (e) {
+    const index = e.currentTarget.dataset.index
+    if (index === '1') {
+      wx.showModal({
+        title: '你答对啦',
+        content: '没有人比李贵星更爱你了',
+        confirmText: '我知道了',
+        showCancel: false
+      })
+    } else {
+      wx.showModal({
+        title: '你答错啦',
+        content: '你要记住李贵星才是最爱你的人',
+        confirmText: '我错啦',
+        showCancel: false
       })
     }
-  },
-
-  onGetOpenid: function () {
-    // 调用云函数
-    wx.cloud.callFunction({
-      name: 'login',
-      data: {},
-      success: res => {
-        console.log('[云函数] [login] user openid: ', res.result.openid)
-        this.setData({
-          openid: res.result.openid
-        })
-      },
-      fail: err => {
-        console.error('[云函数] [login] 调用失败', err)
-        wx.navigateTo({
-          url: '../deployFunctions/deployFunctions',
-        })
-      }
+    this.setData({
+      question: true
     })
   },
-
+  // 去日志页
+  toDaily () {
+    if (app.globalData.loginStatus) {
+      wx.navigateTo({
+        url: '../daily/daily',
+      })
+    } else {
+      app.showNoLoginModal()
+    }
+  },
+  toAnniversary () {
+    if (app.globalData.loginStatus) {
+      wx.navigateTo({
+        url: '../anniversary/anniversary',
+      })
+    } else {
+      app.showNoLoginModal()
+    }
+  },
   // 上传图片
   doUpload: function () {
     // 选择图片
@@ -139,7 +146,6 @@ Page({
         countDown: newConutDown
       })
     }, 1000);
-    console.log(nowTime, startTime, );
 
 
     // 获取用户信息

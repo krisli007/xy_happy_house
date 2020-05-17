@@ -1,7 +1,22 @@
 <!--miniprogram/pages/daily/daily.wxml-->
+<view class="flex-jse page-box">
+    <view bindtap="toFruitMachine" class="btn flex-vm">
+        💫去抽奖
+    </view>
+    <view bindtap="toSweetDaily" class="btn flex-vm">
+        📒甜蜜日记
+    </view>
+    <view bindtap="toAnniversary" class="btn flex-vm">
+        📅纪念日
+    </view>
+    <view bindtap="toMore" class="btn flex-vm">
+        ......
+    </view>
+</view>
 <view class="flex-vm">
     <textarea class="daily-input" maxlength="-1" bindconfirm="submitDaily"></textarea>
 </view>
+
 <view>
     {{test}}
 </view>

@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "抽奖",
+  "usingComponents": {
+    "prize": "../../components/prize/prize"
+  },
+  "disableScroll": true
+}

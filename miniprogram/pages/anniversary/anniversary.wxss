@@ -1,0 +1,76 @@
+/* miniprogram/pages/anniversary/anniversary.wxss */
+.form-box {
+    display: block;
+}
+.detail-box {
+    margin: 32rpx;
+    border: 2rpx solid #999;
+    border-radius: 8rpx;
+    font-weight: 600;
+}
+.form-item {
+    padding: 10rpx 20rpx;
+}
+.form-item + .form-item {
+    border-top: 2rpx solid #999;
+}
+.date {
+    color: #1f4ada;
+}
+.add-btn {
+    position: relative;
+    margin: 20rpx 0 40rpx;
+    width: 90rpx;
+    height: 90rpx;
+    border-radius: 16rpx;
+    color: #fff;
+    background-color: #039BE5;
+}
+
+.anniversary-item {
+    margin: 24rpx 32rpx;
+    padding-left: 16rpx;
+    width: 684rpx;
+    height: 60rpx;
+    border-radius: 16rpx;
+    font-size: 28rpx;
+    font-weight: 600;
+    color: #333;
+    background-color: #f8f8f8;
+    box-shadow: 1px 1px 10px 1px #aaa;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.anniversary-title {
+    max-width: 250rpx;
+    overflow: hidden;
+}
+.anniversary-date {
+    padding-left: 8rpx;
+    font-size: 20rpx;
+    font-weight: 500;
+    color: #ddd;
+}
+.sy-days {
+    width: 140rpx;
+    height: 60rpx;
+    font-size: 44rpx;
+    color: #fff;
+}
+.tian {
+    width: 60rpx;
+    height: 60rpx;
+    color: #fff;
+}
+.notyet .sy-days {
+    background-color: #FF9800;
+}
+.notyet .tian {
+    background-color: #EF6C00;
+}
+.already .sy-days {
+    background-color: #2196F3;
+}
+.already .tian {
+    background-color: #1565C0;
+}

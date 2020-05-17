@@ -1,0 +1,4 @@
+<!--miniprogram/pages/login/login.wxml-->
+<view class="flex-vm box">
+    <button open-type="getUserInfo" bindgetuserinfo="getUserInfo" size="default">点击登录</button>
+</view>

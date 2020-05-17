@@ -1,0 +1,18 @@
+<prize bind:updatePage="updatePage"></prize>
+
+<view class="flex-vm title">
+    中奖记录
+</view>
+
+<view class="flex name-box">
+    <view class="flex1 flex-vm">奖品</view>
+    <view class="flex1 flex-vm">中奖人</view>
+    <view class="flex1 flex-vm">中奖时间</view>
+</view>
+<scroll-view class="record-box" scroll-y>
+    <view wx:for="{{prize}}" wx:key="item" class="flex-jsb record-item">
+        <view class="flex-vm flex1 content">{{item.content}}</view>
+        <view class="flex-vm flex1 name">{{item.userInfo.nickName}}</view>
+        <view class="flex-vm flex1 time">{{item.date}}</view>
+    </view>
+</scroll-view>
