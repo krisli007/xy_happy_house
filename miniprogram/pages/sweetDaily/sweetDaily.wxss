@@ -1,1 +1,30 @@
 /* miniprogram/pages/sweetDaily/sweetDaily.wxss */
+.daily-input {
+    margin: 16rpx 32rpx;
+    padding: 16rpx;
+    width: 686rpx;
+    height: 300rpx;
+    box-sizing: border-box;
+    border-radius: 16rpx;
+    background-color: #f8f8f8;
+}
+.daily-item {
+    margin: 16rpx 32rpx;
+    padding: 16rpx 0;
+    border-bottom: 1px solid #dfdfdf;
+}
+.header {
+    width: 60rpx;
+    height: 60rpx;
+    border-radius: 8rpx;
+    margin-right: 16rpx;
+}
+.nick-name {
+    color: #1565C0;
+    font-weight: 600;
+}
+.item-date {
+    text-align: right;
+    font-size: 20rpx;
+    color: #8f8f8f;
+}

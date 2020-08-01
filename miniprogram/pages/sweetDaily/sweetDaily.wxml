@@ -1,2 +1,15 @@
 <!--miniprogram/pages/sweetDaily/sweetDaily.wxml-->
-<text>miniprogram/pages/sweetDaily/sweetDaily.wxml</text>
+<form bindsubmit="formSubmit" class="form-box flex-jsb">
+    <textarea class="daily-input" maxlength="-1" bindconfirm="submitDaily" name="daily" value="{{default}}" placeholder="请写下我们的点点滴滴"></textarea>
+
+    <button class="add-btn flex-vm" form-type="submit">发表</button>
+</form>
+
+<view wx:for="{{dailyList}}" wx:key="item" class="daily-item flex">
+    <image src="{{item.userInfo.avatarUrl}}" class="header"></image>
+    <view class="flex1 flex-v">
+        <view class="nick-name">{{item.userInfo.nickName}}</view>
+        <view>{{item.content}}</view>
+        <view class="item-date">{{item.date}}</view>
+    </view>
+</view>

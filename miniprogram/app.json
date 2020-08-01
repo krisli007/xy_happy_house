@@ -1,11 +1,11 @@
 {
     "pages": [
         "pages/index/index",
+        "pages/sweetDaily/sweetDaily",
         "pages/anniversary/anniversary",
         "pages/daily/daily",
         "pages/fruitMachine/fruitMachine",
-        "pages/login/login",
-        "pages/sweetDaily/sweetDaily"
+        "pages/login/login"
     ],
     "window": {
         "backgroundTextStyle": "light",

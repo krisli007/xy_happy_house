@@ -31,8 +31,10 @@ Component({
                 isStart: true
             })
             // 开始抽奖逻辑
-            const random = Math.floor(Math.random()*10)
-            const range = random === 9 || random === 0 ? 18 : random + 16
+            let random = Math.floor(Math.random()*10)
+            const realRandom = random === 9 || random === 0
+            random = realRandom ? 1 : random
+            const range = realRandom ? 18 : random + 16
             let count = 0
             const content = this.data.prize[random]
             // 定时器
